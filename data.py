@@ -21,7 +21,7 @@ class TrainDataset(data.Dataset):
           self.cluster = h5_file['feats'][:]    
     
     def random_frame(self, video):
-        videos=copy.deepcopy(video)
+        videos=video
         for i,_ in enumerate(video):
             prob = random.uniform(0,1)
             if prob < 0.15:#15% mask
